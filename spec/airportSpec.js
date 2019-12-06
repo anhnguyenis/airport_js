@@ -4,7 +4,14 @@ describe('Airport', function(){
   describe('airport instructs', function(){
     it('plane to land', function(){
       airport = new Airport();
-      expect(airport.says("land")).toEqual("land")
+      expect(airport.land(plane)).toBe("plane land")
+    });
+  });
+
+  describe('airport instructs', function() {
+    it('plane to take off', function() {
+      airport = new Airport();
+      expect(airport.takeoff(plane)).toBe("plane no longer in the airport")
     });
   });
 });
